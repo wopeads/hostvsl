@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '123456789');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=123456789&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="files/com.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Montserrat&family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
+  <style>
+    header {
+      background: url("files/headerbg2.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    h1 {
+      font-size: calc(1em + 1vw);
+      text-transform: uppercase bold;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .a-btn {
+      text-decoration: none;
+      -webkit-font-smoothing: antialiased;
+      margin: 0;
+      border: 0; 
+      font: inherit; 
+      vertical-align: baseline;
+      color: #2e82bc; 
+      outline: 0; 
+      line-height: 1; 
+      text-align: center; 
+      position:relative!important; display: inline-block!important;
+      border-style: solid; 
+      width: 100%; padding-left: 0!important; padding-right: 0!important; 
+      margin-bottom: 10px; 
+      padding: 22px 44px; border-color: #ff5535; border-width: 0px; 
+      border-radius: 6px; 
+      background: linear-gradient(to bottom, #ff6600 0%, #ff5535 100%); 
+      box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.5); 
+      text-decoration: none!important;
+    }
+    .span-btn {
+      text-decoration: none;
+      -webkit-font-smoothing: antialiased; 
+      text-align: center;
+      margin: 0; 
+      border: 0; 
+      font: inherit;
+      vertical-align: baseline;
+      display: block; 
+      position: relative; 
+      z-index: 1; 
+      padding: 0 15px; 
+      white-space: normal; 
+      font-size: 25px;
+      color: #ffffff; 
+      font-family: Oswald; 
+      font-weight: bold; 
+      text-shadow: #000000 0px 1px 0px;
+      text-decoration: none;
+    }
+    .span-btn2 {
+      -webkit-font-smoothing: antialiased; 
+      text-align: center;
+      padding: 0; border: 0;
+      font: inherit; 
+      vertical-align: baseline; 
+      display: block; 
+      position: relative;
+      z-index: 1; 
+      margin: .2em 0 -.5em; 
+      font-size: 15px; 
+      color: #f5e051; 
+      font-family: Cabin; 
+      font-weight: bold; 
+      font-style: italic;
+      text-shadow: #000000 0px 1px 0px;
+    }
+    .comment {
+      display: block; 
+      padding: 10px 0; 
+      line-height: 20px;
+    }
+    .span {
+      color: #365899; 
+      font-weight: bold;
+    }
+    .answer {
+      color: #444; 
+      -webkit-font-smoothing: antialiased;
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      font: inherit; 
+      vertical-align: baseline; 
+      display: block; 
+      padding-top: 10px; 
+      line-height: 20px;
+      padding-left: 9px; 
+      border-left: 1px solid #E9EBEE; margin-left: 50px; padding-bottom: 0;
+    }
+    .classeNova {
+      color: #444; 
+      -webkit-font-smoothing: antialiased; 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      font: inherit; 
+      vertical-align: baseline;
+      font-family: Arial; 
+      background-color:
+      #F6F7F9;
+      font-size: 14px; 
+      padding-top: 20px;"      
+    }
+    .paragrafo {
+      color: #444; 
+      font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+      line-height: 1.5em; 
+      margin: 0;
+      margin-left: 60px; 
+      margin-bottom: 0px;
+    }
+    .like {
+      font-size: 11px; color: #90949c;
+    }
+    .twenty1 {
+      font-weight: 700; 
+      border-bottom: 1px solid #E9EBEE; 
+      display: block; 
+      padding-bottom: 6px;
+    }
+    .imgComment {
+      width: 60px; 
+      height: 50px; 
+      float: left; 
+      padding-right: 10px;
+    }
+    .hide {
+      display: none;
+    }
+    .pirataria h3 {
+      text-transform: uppercase;
+      font-size: 15px;
+      letter-spacing: 5px;
+    }
+    .pirataria b{
+      color: #FFC400;
+    }
+    .pirataria {
+      font-size: 12px;
+      text-align: justify;
+    }
+    footer {
+      background-color: black;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      color: white;
+    }
+    .cpy {
+      font-size: 12px;
+      margin: 37px 0px 20px 0px;
+    }
+    .links a {
+      font-size: 12px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header class="py-3">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <img src="files/us.png" class="img-fluid my-4">
+          <h1>1 INUSUAL CONSEJO PARA REVERTIR LA INFERTILIDAD Y QUEDAR EMBARAZADA <font color="red">NATURALMENTE</font></h1>
+          <div class="embed-responsive embed-responsive-16by9 my-4">
+            <iframe src="https://player.vimeo.com/video/636614299" allowfullscreen></iframe>
+          </div>
+          <div id="btn1" class="mt-3 hide">
+            <a href="https://pay.hotmart.com/P50281359H?off=7whlvd62" class="a-btn" style="text-decoration: none;">
+              <span class="span-btn">¡QUIERO HACER EL PROGRAMA!</span>
+              <span class="span-btn2">(atención: espacios limitados)</span>
+            </a>
+            <div class="cards mt-3">
+              <img class="img-fluid" src="files/cards/MASTER_CARD.svg"></img>
+              <img class="img-fluid" src="files/cards/VISA.svg"></img>
+              <img class="img-fluid" src="files/cards/AMEX.svg"></img>
+              <img class="img-fluid" src="files/cards/SPEI.svg"></img>
+              <img class="img-fluid" src="files/cards/PAYPAL.svg"></img>
+              <img class="img-fluid" src="files/cards/OXXO.svg"></img>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="comments py-4">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="fb-comments">
+            <div class="fb-comments-header">
+              <span>10 comentários</span>
+            </div>
+            <div class="fb-comments-wrapper" id="1">
+              <table class="fb-comments-comment">
+                <tr>
+                  <td rowspan="3" class="fb-comments-comment-img"><img src="../files/profiles/1.jpeg" /></td>
+                  <td>
+                    <font class="fb-comments-comment-name">
+                      <name>Valentina López</name>
+                    </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="fb-comments-comment-text">Estimada Lisa, Después de 7 años intentando concebir, finalmente quedé embarazada 4 semanas después de haber leído su libro y seguir su programa. Fue simplemente increíble. Anteriormente tuve varios abortos involuntarios recurrentes y también me diagnosticaron problemas genéticos, pero utilizando su sistema quedé embarazada de forma natural a los 44 años y después de 2 histerosalpingografías y 4 IIU negativas incluyendo 6 ciclos de inducción con clomifeno y laparoscopia. Todo lo indicado en su libro tiene sentido. Estoy recomendando su programa a todas mis amigas. ¡Dios le bendiga!</td>
+                </tr>
+                <tr>
+                  <td class="fb-comments-comment-actions">
+                    <like>Me gusta</like>
+                    · 
+                    <reply>Responder</reply>
+                    · 
+                    <likes>27</likes>
+                    
+                    <date>3 min</date>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="fb-comments-wrapper" id="2">
+              <table class="fb-comments-comment">
+                <tr>
+                  <td rowspan="3" class="fb-comments-comment-img"><img src="../files/profiles/2.jpeg" /></td>
+                  <td>
+                    <font class="fb-comments-comment-name">
+                      <name>Mariana Martínez</name>
+                    </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="fb-comments-comment-text">Estimada Lisa, después de pasar por 3 ciclos de FIV fallidos y varia IIU sin ningún resultado, empecé mi periplo a los 37 años ya que no podía aceptar el hecho de que no iba a tener hijos propios. Por pura casualidad encontré su libro en mayo del 2012, implementé la mayor parte de sus pautas exactamente según las instrucciones brindadas en el libro y ¡en menos de 5 semanas me hice una prueba de embarazo casera y dio resultado positivo! Después de más de siete años de tratar de concebir y miles de dólares gastados en tratamientos de infertilidad, yo había logrado realmente quedar embarazada de forma natural sin ningún tipo de medicamentos o intervención médica, ¡solo con la ayuda de un libro que cuesta menos de $40! ¡Voy a tener mi primer bebé en 1 mes! ¡Todavía no lo puedo creer!</td>
+                </tr>
+                <tr>
+                  <td class="fb-comments-comment-actions">
+                    <like>Me gusta</like>
+                    · 
+                    <reply>Responder</reply>
+                    · 
+                    <likes>18</likes>
+                    
+                    <date>4 min</date>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="fb-comments-wrapper" id="3">
+              <table class="fb-comments-comment">
+                <tr>
+                  <td rowspan="3" class="fb-comments-comment-img"><img src="../files/profiles/3.jpeg" /></td>
+                  <td>
+                    <font class="fb-comments-comment-name">
+                      <name>Isabella López</name>
+                    </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="fb-comments-comment-text">Hola Lisa, ¡qué gran libro ha escrito! Tan pronto como empecé a leer, sentí que era el regalo perfecto para las mujeres con problemas de infertilidad. Soy una consejera que trabaja con parejas con problemas de infertilidad, y he encontrado su trabajo sumamente útil para mí y para mis clientes. He venido recomendando y alentando a todos mis clientes a ordenar su libro. Con sus sabias palabras en base a su experiencia y las técnicas alternativas, ¡brinda esperanza a cualquier persona que venga atravesando dificultades para quedar embarazada! Si gusta puede utilizar con toda libertad este testimonial en su sitio web.</td>
+                </tr>
+                <tr>
+                  <td class="fb-comments-comment-actions">
+                    <like>Me gusta</like>
+                    · 
+                    <reply>Responder</reply>
+                    · 
+                    <likes>5</likes>
+                    
+                    <date>12 min</date>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="fb-comments-wrapper" id="4">
+              <table class="fb-comments-comment">
+                <tr>
+                  <td rowspan="3" class="fb-comments-comment-img"><img src="../files/profiles/4.jpeg" /></td>
+                  <td>
+                    <font class="fb-comments-comment-name">
+                      <name>Andrea Sánchez</name>
+                    </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="fb-comments-comment-text">Lisa, yo fui diagnosticada con síndrome de ovario poliquístico e insuficiencia ovárica prematura, hace tres años, y mi médico especialista en fertilidad me dijo que tenía pocas esperanzas de tener un bebé, no sólo a causa de mi edad (tengo 42 años). No me habían dado ninguna esperanza y no tenía nada por lo cual me debía esforzar o alguna alternativa. Como último recurso, mi madre me compró su maravilloso libro. Ha sido el mejor regalo que he recibido JAMÁS y realmente me cambió la vida. Gracias a su programa estoy en proceso de convertirme en madre y todo se lo debo a usted". ¡Gracias! ¡Gracias! ¡Gracias!</td>
+                </tr>
+                <tr>
+                  <td class="fb-comments-comment-actions">
+                    <like>Me gusta</like>
+                    · 
+                    <reply>Responder</reply>
+                    · 
+                    <likes>13</likes>
+                    
+                    <date>19 min</date>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="fb-comments-wrapper" id="5">
+              <table class="fb-comments-comment">
+                <tr>
+                  <td rowspan="3" class="fb-comments-comment-img"><img src="../files/profiles/5.jpeg" /></td>
+                  <td>
+                    <font class="fb-comments-comment-name">
+                      <name>Maria Fernanda</name>
+                    </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="fb-comments-comment-text">Hola Lisa, no tengo palabras para expresar mi gratitud, Lisa... He luchado con problemas de infertilidad desde hace más de una década. Mi ginecólogo me dijo hace un año que una de mis trompas estaba obstruida, y me insistía que la FIV era la única opción que quedaba para mí. Yo estaba desesperada y aterrorizada debido a mi edad relativamente avanzada (tenía 38 el año pasado) y los 2 quistes ováricos que me estaban causando problemas, de que no iba tener hijos. Mi esposo y yo decidimos que continuaríamos luchando pues he leído muchas historias terribles acerca de los efectos secundarios, las bajas tasas de éxito y el dolor involucrado con el procedimiento de FIV, de modo que continuamos buscando una alternativa natural. Casi nos dimos por vencidos y entonces encontré su sitio web y le envié un correo electrónico para que me oriente ANTES de comprar su programa. Usted fue tan servicial y amable que inmediatamente pedí su libro y comencé el programa junto con mi esposo que tenía baja motilidad de los espermatozoides (un problema que también es tratado en su programa). Después de dos meses de intentarlo, quedé embarazada de mi primer bebé. Con una trompa obstruida y 2 quistes ováricos, ¡creo que esto es prácticamente un milagro! ¡Gracias por todo, Lisa!</td>
+                </tr>
+                <tr>
+                  <td class="fb-comments-comment-actions">
+                    <like>Me gusta</like>
+                    · 
+                    <reply>Responder</reply>
+                    · 
+                    <likes>16</likes>
+                    
+                    <date>24 min</date>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <div class="fb-comments-wrapper">
+                <table class="fb-comments-comment" id="6">
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img"><img src="../files/profiles/6.jpeg" /></td>
+                    <td>
+                      <font class="fb-comments-comment-name">
+                        <name>Ana Sofia</name>
+                      </font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">Estimada Lisa, su libro es un material de lectura obligada para cualquier mujer que esté tratando de quedar embarazada. Yo me encontraba devastada y de igual manera mi esposo después de haber sido informados por mi especialista en fertilidad a los 38 años que no tenía más opción que considerar la adopción o donantes de óvulos (de acuerdo a mi médico no producía óvulos y me indicó que tenía 4% de posibilidades de quedar embarazada y un 2% de probabilidad de llevar a término un embarazo). Después de mucha investigación y decenas de horas leyendo artículos y publicaciones en línea relacionados con la infertilidad, ¡encontré su libro! Nunca he creído en nada alternativo a la medicina occidental y pensaba que todas las otras cosas como la medicina china eran un engaño. Pero pronto me di cuenta, con agrado, de lo equivocada que estaba al seguir sus orientaciones paso a paso. Después de un mes de intentar, quedé embarazada y di a luz a un hermoso niño saludable. Nueve meses después de ello, repetí nuevamente los pasos de su libro y después de 2 meses de intentos, quedé embarazada otra vez y di a luz a otro niño perfecto. Recomiendo leer su libro a cualquiera persona con una mente abierta. Simplemente podría ser la respuesta a sus plegarias. ¡Gracias por todo lo que ha hecho por mí, Lisa!</td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Me gusta</like>
+                      · 
+                      <reply>Responder</reply>
+                      · 
+                      <likes>22</likes>
+                      
+                      <date>34 min</date>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="7">
+                <table class="fb-comments-comment">
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img"><img src="../files/profiles/7.jpeg" /></td>
+                    <td>
+                      <font class="fb-comments-comment-name">
+                        <name>Luciana Gandara</name>
+                      </font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">Lisa, fui diagnosticada com SOP e falência ovariana prematura há três anos, e meu médico de fertilidade me disse que eu tinha poucas esperanças de ter um bebê, não apenas por causa da minha idade (tenho 42 anos). Eles não me deram esperança e eu não tinha nada por que lutar ou qualquer alternativa. Como último recurso, minha mãe comprou-me seu livro maravilhoso. Foi o melhor presente que já recebi e realmente mudou minha vida. Graças ao seu programa, estou em vias de me tornar mãe e devo tudo a você. "Obrigada! Obrigada! Obrigada!</td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Me gusta</like>
+                      · 
+                      <reply>Responder</reply>
+                      · 
+                      <likes>17</likes>
+                      
+                      <date>49 min</date>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="8">
+                <table class="fb-comments-comment">
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img"><img src="../files/profiles/8.jpeg" /></td>
+                    <td>
+                      <font class="fb-comments-comment-name">
+                        <name>Laura Flores</name>
+                      </font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">Estimada Lisa, su libro es un material de lectura obligada para cualquier mujer que esté tratando de quedar embarazada. Yo me encontraba devastada y de igual manera mi esposo después de haber sido informados por mi especialista en fertilidad a los 38 años que no tenía más opción que considerar la adopción o donantes de óvulos (de acuerdo a mi médico no producía óvulos y me indicó que tenía 4% de posibilidades de quedar embarazada y un 2% de probabilidad de llevar a término un embarazo). Después de mucha investigación y decenas de horas leyendo artículos y publicaciones en línea relacionados con la infertilidad, ¡encontré su libro! Nunca he creído en nada alternativo a la medicina occidental y pensaba que todas las otras cosas como la medicina china eran un engaño. Pero pronto me di cuenta, con agrado, de lo equivocada que estaba al seguir sus orientaciones paso a paso. Después de un mes de intentar, quedé embarazada y di a luz a un hermoso niño saludable. Nueve meses después de ello, repetí nuevamente los pasos de su libro y después de 2 meses de intentos, quedé embarazada otra vez y di a luz a otro niño perfecto. Recomiendo leer su libro a cualquiera persona con una mente abierta. Simplemente podría ser la respuesta a sus plegarias. ¡Gracias por todo lo que ha hecho por mí, Lisa!</td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Me gusta</like>
+                      · 
+                      <reply>Responder</reply>
+                      · 
+                      <likes>7</likes>
+                      
+                      <date>55 min</date>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="9">
+                <table class="fb-comments-comment">
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img"><img src="../files/profiles/9.jpeg" /></td>
+                    <td>
+                      <font class="fb-comments-comment-name">
+                        <name>Juliana Díaz</name>
+                      </font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">Estimada Lisa, mi esposo y yo vamos a ir al médico hoy pues he dado POSITIVO en las pruebas ayer. Estoy llorando mientras escribo estas palabras. Estoy seguro de que recibe un montón de cartas como esta todos los días, pero yo sólo quería agradecerle por escribir este programa y dar esperanza a mujeres de mi edad. Tengo 46 años y finalmente voy a ser madre. Que Dios le bendiga y bendiga a su familia</td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Me gusta</like>
+                      · 
+                      <reply>Responder</reply>
+                      · 
+                      <likes>12</likes>
+                      
+                      <date>56 min</date>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="10">
+                <table class="fb-comments-comment">
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img"><img src="../files/profiles/10.jpeg" /></td>
+                    <td>
+                      <font class="fb-comments-comment-name">
+                        <name>Rebeca Rodríguez</name>
+                      </font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">Querida Lisa, mi médico me había dicho que me olvide de tener un hijo a mi edad y que debería considerar adoptar a un bebé, pero en vez de ello yo tomé el asunto en mis propias manos y me dediqué a investigar y encontré su libro. Pronto me di cuenta que es un verdadero tesoro que podía consultar una y otra vez. El enfoque claro y lógico, pero compasivo, con que se aborda la infertilidad desde una perspectiva totalmente diferente me cautivo. He seguido sus recomendaciones de 5 pasos y después de menos de 3 meses de intentarlo, finalmente tuve éxito en mi larga y dolorosa batalla. Voy a tener un hijo. No tengo palabras para expresar mi gratitud. ¡Gracias!</td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Me gusta</like>
+                      · 
+                      <reply>Responder</reply>
+                      · 
+                      <likes>26</likes>
+                      
+                      <date>58 min</date>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 mb-4 text-center hide" id="btn2">
+            <a href="https://pay.hotmart.com/P50281359H?off=7whlvd62" class="a-btn" style="text-decoration: none;">
+              <span class="span-btn">¡QUIERO HACER EL PROGRAMA!</span>
+              <span class="span-btn2">(atención: espacios limitados)</span>
+            </a>
+            <div class="cards mt-3">
+              <img class="img-fluid" src="files/cards/MASTER_CARD.svg"></img>
+              <img class="img-fluid" src="files/cards/VISA.svg"></img>
+              <img class="img-fluid" src="files/cards/AMEX.svg"></img>
+              <img class="img-fluid" src="files/cards/SPEI.svg"></img>
+              <img class="img-fluid" src="files/cards/PAYPAL.svg"></img>
+              <img class="img-fluid" src="files/cards/OXXO.svg"></img>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-6 pirataria">
+          <h3>LA PIRATERÍA ES <b>DELITO</b></h3>
+          La venta de Milagro Para El Embarazo solo se puede realizar a través de este sitio web, registrado a nombre de CLICK VENDAS. Cualquier otro sitio web en el que encuentre este programa es FALSO y es ilegal. Evite la falsificación y rechace el contenido ilegal o pirateado. NO compre programas similares que no estén basados ​​en años de estudio de psicología del comportamiento. No somos responsables de las compras realizadas en otros sitios.
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="row cpy">
+            <div class="col text-center">
+              Copyright 2020 - Milagro Para El Embarazo ®<br>
+              Todos los derechos reservados.
+            </div>
+          </div>
+          <div class="row links">
+            <div class="col text-center">
+              <a href="terms.html" target="_blank">Terminos de Uso</a>          
+              <a href="privacy.html" target="_blank">Política de Privacidad</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-12 text-center" style="font-size: 11px; padding: 40px 0px 20px 0px; color: #b7adad;">
+          <b>Este sitio no está afiliado a Facebook ni a ninguna entidad de Facebook. Después de salir de Facebook, la responsabilidad no es de ellos, sino de nuestro sitio web. Hacemos todo lo posible para indicar y mostrar claramente todas las pruebas del producto y utilizar resultados reales. No vendemos su correo electrónico ni ninguna información a terceros. Nunca hacemos ningún tipo de spam. Si tiene alguna pregunta, no dude en utilizar el enlace de contacto y hablar con nosotros durante el horario comercial de lunes a viernes de 9:00 a. M. A 6:00 p. M. Leemos y respondemos todos los mensajes por orden de llegada.
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function showBtn1 () {
+      document.getElementById("btn1").classList.remove("hide")
+    }
+    setTimeout(showBtn1, 2030000)
+    function showBtn2 () {
+      document.getElementById("btn2").classList.remove("hide")
+    }
+    setTimeout(showBtn2, 2030000)
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="files/com.js"></script>
+</body>
+</html>
